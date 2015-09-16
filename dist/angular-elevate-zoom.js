@@ -2,7 +2,7 @@
  *	 Angular Elevated Zoom jquery wrapper (angular-elevate-zoom)
  *	 Elevated Zoom jQuery plugin wrapper for Angular.js, by AppFeel.
  *
- *	 Version: 1.0.1
+ *	 Version: 1.0.2
  * 	 License: MIT
  */
 
@@ -31,10 +31,9 @@
             },
             link: function ($scope, $elem, $attrs) {
                 $attrs.$observe('ezZoomImage', function (interpolatedValue) {
+                    ElevateZoomSvc.remove($elem);
                     if (interpolatedValue) {
                         ElevateZoomSvc.attach($elem, interpolatedValue, $scope.ezZoomConfig);
-                    } else {
-                        ElevateZoomSvc.remove($elem);
                     }
                 });
             }
