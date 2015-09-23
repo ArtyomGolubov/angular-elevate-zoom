@@ -52,9 +52,13 @@
             remove: function (zoomImageDOM) {
                 var zoomImage = $(zoomImageDOM);
 
-                $("#" + zoomImage.attr("id") + "-zoomContainer").remove();
-                zoomImage.removeData('elevateZoom');
-                zoomImage.removeData('zoomImage');
+                if (zoomImage.length > 0) {
+                    $("#" + zoomImage.attr("id") + "-zoomContainer").remove();
+                    zoomImage.removeData('elevateZoom');
+                    zoomImage.removeData('zoomImage');
+                } else {
+                    $(".zoomContainer").remove();
+                }
             }
         }
     }]);
