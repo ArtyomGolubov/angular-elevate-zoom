@@ -14,7 +14,9 @@ Directive & service to wrap [elevate zoom](http://www.elevateweb.co.uk/image-zoo
 $ bower install angular-elevate-zoom
 ```
 
-### Html snippet
+### Example
+
+Place this code in your html:
 
 ```html
 
@@ -27,8 +29,14 @@ $ bower install angular-elevate-zoom
         </div>
     </div>
 </div>
-
 ```
+
+Add the dependency in your angular app:
+
+```javascript
+angular.module('myApp', ['angular-elevate-zoom']);
+```
+
 
 ## License
 The MIT License (MIT)
